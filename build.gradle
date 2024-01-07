@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.spring.test.fast'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation platform('org.junit:junit-bom:5.9.1')
+    implementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'org.junit.platform:junit-platform-launcher'
+    implementation 'org.jline:jline:3.25.0'
+    implementation 'org.projectlombok:lombok:1.18.28'
+}
+
+test {
+    useJUnitPlatform()
+}

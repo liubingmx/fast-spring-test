@@ -1,12 +1,10 @@
-package com.spring.test.fast.command;
+package com.fast.spring.test.command;
 
-import com.spring.test.fast.exception.FastTestException;
-import com.spring.test.fast.loader.DefaultHotClassLoader;
+import com.fast.spring.test.exception.FastTestException;
+import com.fast.spring.test.loader.DefaultHotClassLoader;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author liubingmx@163.com

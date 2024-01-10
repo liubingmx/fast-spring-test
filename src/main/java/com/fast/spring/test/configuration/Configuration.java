@@ -1,4 +1,4 @@
-package com.spring.test.fast.configuration;
+package com.fast.spring.test.configuration;
 
 /**
  * @author liubingmx@163.com

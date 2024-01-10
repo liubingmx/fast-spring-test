@@ -1,4 +1,4 @@
-package com.spring.test.fast.runner;
+package com.fast.spring.test.runner;
 
 /**
  * @author liubingmx@163.com

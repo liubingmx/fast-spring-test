@@ -1,6 +1,5 @@
-package com.spring.test.fast.loader;
+package com.fast.spring.test.loader;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;

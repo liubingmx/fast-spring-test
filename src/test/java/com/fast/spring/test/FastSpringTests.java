@@ -1,4 +1,4 @@
-package com.spring.test.fast;
+package com.fast.spring.test;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

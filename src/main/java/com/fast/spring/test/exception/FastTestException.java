@@ -1,4 +1,4 @@
-package com.spring.test.fast.exception;
+package com.fast.spring.test.exception;
 
 /**
  * @author liubingmx@163.com

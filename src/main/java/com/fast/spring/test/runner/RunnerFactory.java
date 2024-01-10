@@ -1,4 +1,4 @@
-package com.spring.test.fast.runner;
+package com.fast.spring.test.runner;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;

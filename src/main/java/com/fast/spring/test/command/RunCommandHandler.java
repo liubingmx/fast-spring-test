@@ -1,7 +1,7 @@
-package com.spring.test.fast.command;
+package com.fast.spring.test.command;
 
-import com.spring.test.fast.loader.HotLoadClassLoader;
-import com.spring.test.fast.runner.RunnerFactory;
+import com.fast.spring.test.loader.HotLoadClassLoader;
+import com.fast.spring.test.runner.RunnerFactory;
 
 import java.util.Optional;
 

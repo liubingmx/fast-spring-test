@@ -1,4 +1,4 @@
-package com.spring.test.fast.runner;
+package com.fast.spring.test.runner;
 
 import org.junit.platform.engine.discovery.DiscoverySelectors;
 import org.junit.platform.engine.discovery.MethodSelector;

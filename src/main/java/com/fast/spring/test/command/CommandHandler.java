@@ -1,4 +1,4 @@
-package com.spring.test.fast.command;
+package com.fast.spring.test.command;
 
 /**
  * @author: liubingmx@163.com

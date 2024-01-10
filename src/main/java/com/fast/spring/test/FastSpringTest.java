@@ -4,7 +4,7 @@ import com.fast.spring.test.command.Command;
 import com.fast.spring.test.command.CommandHandlerFactory;
 import com.fast.spring.test.configuration.Configuration;
 import com.fast.spring.test.exception.FastTestException;
-import com.spring.test.fast.command.*;
+
 import org.jline.reader.EndOfFileException;
 import org.jline.reader.LineReader;
 import org.jline.reader.LineReaderBuilder;

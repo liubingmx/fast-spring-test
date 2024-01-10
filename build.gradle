@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group = 'com.spring.test.fast'
+group = 'com.fast.spring.test'
 version = '1.0-SNAPSHOT'
 
 repositories {

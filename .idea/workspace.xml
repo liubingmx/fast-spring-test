@@ -100,8 +100,8 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "configurable.group.appearance",
     "vue.rearranger.settings.migration": "true"
   }
@@ -240,7 +240,7 @@
       <workItem from="1704627950536" duration="421000" />
       <workItem from="1704628382721" duration="398000" />
       <workItem from="1704628980248" duration="1345000" />
-      <workItem from="1704632662014" duration="15380000" />
+      <workItem from="1704632662014" duration="15668000" />
     </task>
     <servers />
   </component>
@@ -251,22 +251,22 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/spring/test/fast/FastSpringTest.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/fast/spring/test/FastSpringTest.java</url>
           <line>38</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/spring/test/fast/FastSpringTest.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/fast/spring/test/FastSpringTest.java</url>
           <line>55</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/spring/test/fast/command/RunCommandHandler.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/fast/spring/test/command/RunCommandHandler.java</url>
           <line>27</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/spring/test/fast/runner/RunnerFactory.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/fast/spring/test/runner/RunnerFactory.java</url>
           <line>28</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>

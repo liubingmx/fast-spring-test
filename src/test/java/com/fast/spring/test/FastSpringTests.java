@@ -11,6 +11,7 @@ public class FastSpringTests {
 
     @Test
     public void test() {
+
         System.out.println("test...");
         Assertions.assertTrue(true);
     }

@@ -8,16 +8,47 @@ import java.nio.file.Path;
  * @author liubingmx@163.com
  * @create 2024/01/07
  */
-public class DefaultHotClassLoader extends ClassLoader implements HotLoadClassLoader{
+public class DefaultHotClassLoader  implements HotLoadClassLoader{
+
     @Override
     public Class<?> loadTestClass(String testClassName) {
-        String fileName = testClassName.replaceAll("\\.", "/") + ".class";
-        fileName = (getClass().getResource("/") + fileName).substring(5); // 判断class文件修改时间使用，substring(6)去掉开头的file:/
         try {
-            byte[] data = Files.readAllBytes(Path.of(fileName));
-            return defineClass(testClassName, data, 0, data.length);
-        } catch (IOException e) {
+            return new InnerHotLoadClassLoader(testClassName).loadClass(testClassName);
+        } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+
+    private static class InnerHotLoadClassLoader extends ClassLoader{
+
+        private String loadClassName;
+
+        public InnerHotLoadClassLoader(String loadClassName) {
+            this.loadClassName = loadClassName;
+        }
+
+        @Override
+        public Class<?> loadClass(String name) throws ClassNotFoundException {
+            if (!name.equals(loadClassName)) {
+                return Thread.currentThread().getContextClassLoader().loadClass(name);
+            }
+            return findClass(name);
+        }
+
+        @Override
+        public Class<?> findClass(String testClassName) {
+            if (testClassName == null) {
+                return null;
+            }
+            String fileName = testClassName.replaceAll("\\.", "/") + ".class";
+            fileName = (getClass().getResource("/") + fileName).substring(5); // 判断class文件修改时间使用，substring(6)去掉开头的file:/
+            try {
+                byte[] data = Files.readAllBytes(Path.of(fileName));
+                return defineClass(testClassName, data, 0, data.length);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 }

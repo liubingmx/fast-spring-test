@@ -2,20 +2,18 @@ package com.fast.spring.test;
 
 import com.fast.spring.test.command.Command;
 import com.fast.spring.test.command.CommandHandlerFactory;
+import com.fast.spring.test.command.CommandParser;
 import com.fast.spring.test.configuration.Configuration;
 import com.fast.spring.test.exception.FastTestException;
-
 import org.jline.reader.EndOfFileException;
 import org.jline.reader.LineReader;
 import org.jline.reader.LineReaderBuilder;
 import org.jline.reader.impl.DefaultHighlighter;
-import org.jline.reader.impl.DefaultParser;
 import org.jline.reader.impl.history.DefaultHistory;
 import org.jline.terminal.Terminal;
 import org.jline.terminal.TerminalBuilder;
 
 import java.io.IOException;
-import java.util.List;
 
 /**
  * @author liubingmx@163.com
@@ -37,7 +35,7 @@ public class FastSpringTest {
                     continue;
                 }
 
-                Command command = parseCommand(lineReader);
+                Command command = ((CommandParser)lineReader.getParser()).parseCommand(commandLine);
                 CommandHandlerFactory.getCommandHandler(command.getName()).run(command);
             } catch (FastTestException e) {
                 System.out.println("\n" + e.getMessage());
@@ -54,16 +52,7 @@ public class FastSpringTest {
         }
     }
 
-    private static Command parseCommand(LineReader lineReader) {
-        List<String> words = lineReader.getParsedLine().words();
-        Command command;
-        if (words.size() > 1) {
-            command = new Command(words.get(0), new Command.Option(words.get(1)));
-        } else {
-            command = new Command(lineReader.getParsedLine().word());
-        }
-        return command;
-    }
+
 
     private static LineReader getLineReader() {
         Terminal terminal = null;
@@ -80,7 +69,7 @@ public class FastSpringTest {
                 .terminal(terminal)
                 .history(new DefaultHistory())
                 .highlighter(new DefaultHighlighter())
-                .parser(new DefaultParser())
+                .parser(new CommandParser())
                 .build();
     }
 

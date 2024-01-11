@@ -1,5 +1,7 @@
-package com.fast.spring.test.command;
+package com.fast.spring.test.command.handler;
 
+import com.fast.spring.test.command.Command;
+import com.fast.spring.test.command.CommandHandler;
 import com.fast.spring.test.loader.HotLoadClassLoader;
 import com.fast.spring.test.runner.RunnerFactory;
 
@@ -9,7 +11,7 @@ import java.util.Optional;
  * @author liubingmx@163.com
  * @create 2024/01/07
  */
-public class RunCommandHandler implements CommandHandler{
+public class RunCommandHandler implements CommandHandler {
 
     private HotLoadClassLoader hotLoadClassLoader;
 

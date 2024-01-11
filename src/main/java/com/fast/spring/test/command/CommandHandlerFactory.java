@@ -1,5 +1,6 @@
 package com.fast.spring.test.command;
 
+import com.fast.spring.test.command.handler.RunCommandHandler;
 import com.fast.spring.test.exception.FastTestException;
 import com.fast.spring.test.loader.DefaultHotClassLoader;
 

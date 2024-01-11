@@ -10,7 +10,7 @@ public class Configuration {
      *  cli prompt
      */
     private String prompt = "\033[1;34mFast-Spring-Test ->\033[0m";
-    private static String commandSeparator = " ";
+    private String commandSeparator = " ";
 
     public Configuration(ConfigurationBuilder builder) {
         this.prompt = builder.getPrompt();
@@ -20,7 +20,7 @@ public class Configuration {
         return prompt;
     }
 
-    public static String getCommandSeparator() {
+    public String getCommandSeparator() {
         return commandSeparator;
     }
 

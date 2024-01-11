@@ -87,6 +87,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.Build fast-spring-test.executor": "Run",
+    "Gradle.CommandParserTest.test.executor": "Run",
     "Gradle.Download Sources.executor": "Run",
     "Gradle.fast-spring-test [:FastSpringTests.main()].executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -94,6 +95,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/liubing/IdeaProjects/fast-spring-test/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -106,12 +108,17 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="gradle clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.FastSpringTests">
+  <component name="RunManager" selected="Gradle.CommandParserTest.test">
     <configuration name="FastSpringTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="java.spring.test.fast.FastSpringTest" />
       <module name="fast-spring-test.main" />
@@ -137,6 +144,30 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="CommandParserTest.test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.fast.spring.test.command.CommandParserTest.test&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="FastSpringTests.test (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -189,35 +220,13 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="fast-spring-test [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="jar" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CommandParserTest.test" />
         <item itemvalue="Application.FastSpringTests" />
         <item itemvalue="Gradle.FastSpringTests.test (1)" />
         <item itemvalue="Application.FastSpringTest" />
         <item itemvalue="Gradle.fast-spring-test [build]" />
-        <item itemvalue="Gradle.fast-spring-test [jar]" />
       </list>
     </recent_temporary>
   </component>
@@ -240,7 +249,7 @@
       <workItem from="1704627950536" duration="421000" />
       <workItem from="1704628382721" duration="398000" />
       <workItem from="1704628980248" duration="1345000" />
-      <workItem from="1704632662014" duration="15668000" />
+      <workItem from="1704632662014" duration="20112000" />
     </task>
     <servers />
   </component>
@@ -261,7 +270,7 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/fast/spring/test/command/RunCommandHandler.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/fast/spring/test/command/handler/RunCommandHandler.java</url>
           <line>27</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
@@ -269,6 +278,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/fast/spring/test/runner/RunnerFactory.java</url>
           <line>28</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/fast/spring/test/command/CommandParserTest.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/fast/spring/test/command/CommandParserTest.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

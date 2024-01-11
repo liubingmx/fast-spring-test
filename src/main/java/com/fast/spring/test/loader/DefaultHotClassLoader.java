@@ -42,7 +42,7 @@ public class DefaultHotClassLoader  implements HotLoadClassLoader{
                 return null;
             }
             String fileName = testClassName.replaceAll("\\.", "/") + ".class";
-            fileName = (getClass().getResource("/") + fileName).substring(5); // 判断class文件修改时间使用，substring(6)去掉开头的file:/
+            fileName = (getClass().getResource("/") + fileName).substring(5);
             try {
                 byte[] data = Files.readAllBytes(Path.of(fileName));
                 return defineClass(testClassName, data, 0, data.length);

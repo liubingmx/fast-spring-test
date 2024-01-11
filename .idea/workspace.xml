@@ -4,24 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39d6d11a-42d9-4c66-bf28-163d575b53d7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="39d6d11a-42d9-4c66-bf28-163d575b53d7" name="Changes" comment="[feat] add hot class loader">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fast/spring/test/command/CommandParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/fast/spring/test/command/CommandParserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/test/fast/FastSpringTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/test/fast/FastSpringTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/test/fast/command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/test/fast/command/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/test/fast/command/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/test/fast/command/CommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/test/fast/command/CommandHandlerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/test/fast/command/CommandHandlerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/test/fast/command/RunCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/test/fast/command/RunCommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/test/fast/configuration/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/test/fast/configuration/Configuration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/test/fast/exception/FastTestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/test/fast/exception/FastTestException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/test/fast/loader/DefaultHotClassLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/test/fast/loader/DefaultHotClassLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/test/fast/loader/HotLoadClassLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/test/fast/loader/HotLoadClassLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/test/fast/runner/JunitRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/test/fast/runner/JunitRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/test/fast/runner/RunnerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/test/fast/runner/RunnerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/test/fast/runner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/test/fast/runner/TestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/spring/test/fast/FastSpringTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/spring/test/fast/FastSpringTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fast/spring/test/FastSpringTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fast/spring/test/FastSpringTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fast/spring/test/command/CommandHandlerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fast/spring/test/command/CommandHandlerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fast/spring/test/command/RunCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fast/spring/test/command/handler/RunCommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fast/spring/test/configuration/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fast/spring/test/configuration/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fast/spring/test/loader/DefaultHotClassLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fast/spring/test/loader/DefaultHotClassLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fast/spring/test/FastSpringTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fast/spring/test/FastSpringTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构图.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +113,7 @@
       <command value="gradle clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.CommandParserTest.test">
+  <component name="RunManager" selected="Application.com.fast.spring.test.FastSpringTests">
     <configuration name="FastSpringTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="java.spring.test.fast.FastSpringTest" />
       <module name="fast-spring-test.main" />
@@ -138,6 +133,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.spring.test.fast.exception.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.fast.spring.test.FastSpringTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.fast.spring.test.FastSpringTests" />
+      <module name="fast-spring-test.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fast.spring.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -193,40 +201,13 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="fast-spring-test [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="env">
-          <map>
-            <entry key="-Dorg.gradle.logging.level" value="debug" />
-          </map>
-        </option>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.com.fast.spring.test.FastSpringTests" />
         <item itemvalue="Gradle.CommandParserTest.test" />
         <item itemvalue="Application.FastSpringTests" />
         <item itemvalue="Gradle.FastSpringTests.test (1)" />
         <item itemvalue="Application.FastSpringTest" />
-        <item itemvalue="Gradle.fast-spring-test [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -249,12 +230,16 @@
       <workItem from="1704627950536" duration="421000" />
       <workItem from="1704628382721" duration="398000" />
       <workItem from="1704628980248" duration="1345000" />
-      <workItem from="1704632662014" duration="20112000" />
+      <workItem from="1704632662014" duration="22205000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[feat] add hot class loader" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat] add hot class loader" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

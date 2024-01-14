@@ -1,5 +1,7 @@
 package com.fast.spring.test.runner;
 
+import com.fast.spring.test.runner.junit.JunitRunner;
+
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 import java.util.Map;
@@ -45,12 +47,16 @@ public class RunnerFactory {
                 if (Objects.nonNull(testAnnotation)) {
                     return runnerMap.get(runnerName);
                 }
-                Method method = clazz.getDeclaredMethod(methodName);
-                testAnnotation = method.getAnnotation(testAnnotationClazz);
-                if (Objects.nonNull(testAnnotation)) {
-                    return runnerMap.get(runnerName);
+                if (methodName != null) {
+                    Method method = clazz.getDeclaredMethod(methodName);
+                    testAnnotation = method.getAnnotation(testAnnotationClazz);
+                    if (Objects.nonNull(testAnnotation)) {
+                        return runnerMap.get(runnerName);
+                    }
                 }
-            } catch (ClassNotFoundException | NoSuchMethodException | ClassCastException e) {
+            } catch (ClassNotFoundException e) {
+                continue;
+            }catch (NoSuchMethodException | ClassCastException e){
                 throw new RuntimeException(e);
             }
         }

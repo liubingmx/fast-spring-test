@@ -16,6 +16,12 @@ public class FastSpringTests {
         Assertions.assertTrue(true);
     }
 
+    @Test
+    public void testException() {
+        System.out.println("test...");
+        Assertions.assertTrue(false);
+    }
+
     public static void main(String[] args) {
         FastSpringTest.run();
     }

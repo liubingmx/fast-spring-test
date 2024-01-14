@@ -4,6 +4,9 @@ import com.fast.spring.test.command.Command;
 import com.fast.spring.test.command.CommandHandlerFactory;
 import com.fast.spring.test.command.CommandParser;
 import com.fast.spring.test.configuration.Configuration;
+import com.fast.spring.test.event.EventBus;
+import com.fast.spring.test.event.EventEnum;
+import com.fast.spring.test.event.FastSpringTestEvent;
 import com.fast.spring.test.exception.FastTestException;
 import org.jline.reader.EndOfFileException;
 import org.jline.reader.LineReader;
@@ -21,22 +24,24 @@ import java.io.IOException;
  */
 public class FastSpringTest {
 
+
+
     public static void run() {
         run(new Configuration.ConfigurationBuilder().build());
     }
 
     public static void run(Configuration configuration)  {
-
         LineReader lineReader = getLineReader();
+        EventBus.publishEvent(new FastSpringTestEvent(EventEnum.STARTED, lineReader));
         while (true) {
             try {
                 String commandLine = lineReader.readLine(configuration.getPrompt()).trim();
                 if (commandLine.isEmpty()) {
                     continue;
                 }
-
                 Command command = ((CommandParser)lineReader.getParser()).parseCommand(commandLine);
                 CommandHandlerFactory.getCommandHandler(command.getName()).run(command);
+                EventBus.publishEvent(new FastSpringTestEvent(EventEnum.EXECUTE_COMMAND, command));
             } catch (FastTestException e) {
                 System.out.println("\n" + e.getMessage());
                 continue;

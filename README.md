@@ -23,7 +23,7 @@
 
 <dependencies>
     <dependency>
-        <groupId>com.fast.spring.test</groupId>
+        <groupId>cn.net.fasttest</groupId>
         <artifactId>fast-spring-test</artifactId>
         <version>${fast.spring.test.version}</version>
     </dependency>

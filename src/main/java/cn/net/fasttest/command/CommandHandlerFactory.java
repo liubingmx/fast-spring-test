@@ -1,5 +1,6 @@
 package cn.net.fasttest.command;
 
+import cn.net.fasttest.command.handler.HistoryCommandHandler;
 import cn.net.fasttest.command.handler.ReRunCommandHandler;
 import cn.net.fasttest.event.EventBus;
 import cn.net.fasttest.exception.FastTestException;
@@ -17,15 +18,18 @@ public class CommandHandlerFactory {
 
     private static List<CommandHandler> handlers = new ArrayList<>();
 
-    static {
+    public static void init() {
         RunCommandHandler runCommandHandler = new RunCommandHandler();
         ShowCommandHandler showCommandHandler = new ShowCommandHandler();
         ReRunCommandHandler reRunCommandHandler = new ReRunCommandHandler();
+        HistoryCommandHandler historyCommandHandler = new HistoryCommandHandler();
         register(runCommandHandler);
         register(showCommandHandler);
         register(reRunCommandHandler);
+        register(historyCommandHandler);
         EventBus.addListener(showCommandHandler);
         EventBus.addListener(reRunCommandHandler);
+        EventBus.addListener(historyCommandHandler);
     }
 
     public static void register(CommandHandler commandHandler) {

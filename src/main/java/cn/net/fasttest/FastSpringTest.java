@@ -24,13 +24,15 @@ import java.io.IOException;
  */
 public class FastSpringTest {
 
-
-
+    static {
+        CommandHandlerFactory.init();
+    }
     public static void run() {
         run(new Configuration.ConfigurationBuilder().build());
     }
 
     public static void run(Configuration configuration)  {
+
         LineReader lineReader = getLineReader();
         EventBus.publishEvent(new FastSpringTestEvent(EventEnum.STARTED, lineReader));
         while (true) {

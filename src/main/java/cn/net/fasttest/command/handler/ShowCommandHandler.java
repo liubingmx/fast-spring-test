@@ -6,6 +6,7 @@ import cn.net.fasttest.event.EventEnum;
 import cn.net.fasttest.event.FastSpringTestEvent;
 import cn.net.fasttest.event.FastSpringTestListener;
 import cn.net.fasttest.runner.TestRunResult;
+import cn.net.fasttest.utils.FontColorUtil;
 
 /**
  * @author liubingmx@163.com
@@ -43,9 +44,18 @@ public class ShowCommandHandler implements CommandHandler, FastSpringTestListene
 
     private void showResult() {
         if (TestRunResult.state.SUCCESSFUL.name().equals(lastRunResult.getState())) {
-            log("------------------------execution finished : %s" + "------------------------", lastRunResult.getDisplayName());
+            log("------------------------execution finished : %s" + "------------------------", FontColorUtil.format("√ " + lastRunResult.getDisplayName(), FontColorUtil.BULE));
         } else {
-            log("------------------------execution failed : %s" + "------------------------", lastRunResult.getDisplayName());
+            log("------------------------execution failed : %s" + "------------------------", FontColorUtil.format("× " + lastRunResult.getDisplayName(), FontColorUtil.RED));
         }
+        System.out.println();
+        log("--------------------------------- Summary ---------------------------------");
+        log("RUN %s",lastRunResult.getUniqueId());
+        log("Result -- started:%d -- succeeded: %d -- failed: %d -- skipped: %d -- cost: %d ms",
+                lastRunResult.getStarted(), lastRunResult.getSucceeded(), lastRunResult.getFailed(),
+                lastRunResult.getSkipped(), lastRunResult.getCost());
+
+        log("You can use \"SHOW\" command to see detail.");
+        log("You can use \"RERUN\" to rerun these cases.");
     }
 }

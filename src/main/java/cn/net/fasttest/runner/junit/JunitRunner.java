@@ -6,6 +6,9 @@ import org.junit.platform.launcher.Launcher;
 import org.junit.platform.launcher.LauncherDiscoveryRequest;
 import org.junit.platform.launcher.core.LauncherDiscoveryRequestBuilder;
 import org.junit.platform.launcher.core.LauncherFactory;
+import org.junit.platform.launcher.listeners.TestExecutionSummary;
+
+import java.io.PrintWriter;
 
 /**
  * @author liubingmx@163.com
@@ -26,7 +29,8 @@ public class JunitRunner implements TestRunner {
                     .selectors(DiscoverySelectors.selectClass(clazz))
                     .build();
         }
-        launcher.registerTestExecutionListeners(new JunitTestExecutionListener());
+        JunitTestExecutionListener junitTestExecutionListener = new JunitTestExecutionListener(clazz, method);
+        launcher.registerTestExecutionListeners(junitTestExecutionListener);
         launcher.execute(request);
     }
 }

@@ -15,7 +15,7 @@ public class CommandParser extends DefaultParser {
     }
 
     Command.Option getOption(final String line) {
-        String option = line.replace(getCommand(line), "");
+        String option = line.replace(getCommand(line), "").trim();
         return new Command.Option(option);
     }
 

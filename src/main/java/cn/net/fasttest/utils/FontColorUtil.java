@@ -1,0 +1,17 @@
+package cn.net.fasttest.utils;
+
+/**
+ * @author bing
+ * @create 2024/01/14
+ */
+public class FontColorUtil {
+
+    private static final String RESET = "\033[0m";
+    public static String BULE = "\033[1;34m";
+    public static String RED = "\033[1;31m";
+
+
+    public static String format(String content, String color) {
+        return color + content + RESET;
+    }
+}

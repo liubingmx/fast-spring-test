@@ -10,6 +10,51 @@ public class TestRunResult {
 
     private String state;
     private String displayName;
+    private long cost;
+    private long started;
+    private long succeeded;
+    private long failed;
+    private long skipped;
+
+    public void setCost(long cost) {
+        this.cost = cost;
+    }
+
+    public long getStarted() {
+        return started;
+    }
+
+    public void setStarted(long started) {
+        this.started = started;
+    }
+
+    public long getSucceeded() {
+        return succeeded;
+    }
+
+    public void setSucceeded(long succeeded) {
+        this.succeeded = succeeded;
+    }
+
+    public long getFailed() {
+        return failed;
+    }
+
+    public void setFailed(long failed) {
+        this.failed = failed;
+    }
+
+    public long getSkipped() {
+        return skipped;
+    }
+
+    public void setSkipped(long skipped) {
+        this.skipped = skipped;
+    }
+
+    public void setSkipped(int skipped) {
+        this.skipped = skipped;
+    }
 
     private Throwable throwable;
 
@@ -43,6 +88,14 @@ public class TestRunResult {
 
     public void setState(String state) {
         this.state = state;
+    }
+
+    public Long getCost() {
+        return cost;
+    }
+
+    public void setCost(Long cost) {
+        this.cost = cost;
     }
 
     /**

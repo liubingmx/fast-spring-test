@@ -10,6 +10,7 @@ import org.junit.platform.launcher.TestIdentifier;
 import org.junit.platform.launcher.listeners.SummaryGeneratingListener;
 import org.junit.platform.launcher.listeners.TestExecutionSummary;
 
+import java.io.PrintWriter;
 import java.util.Optional;
 
 /**
@@ -18,18 +19,33 @@ import java.util.Optional;
  */
 public class JunitTestExecutionListener extends SummaryGeneratingListener implements TestExecutionListener {
 
+    private Class<?> clazz;
+
+    private String method;
+
+    public JunitTestExecutionListener(Class<?> clazz, String method) {
+        this.clazz = clazz;
+        this.method = method;
+    }
+
     @Override
     public void executionFinished(TestIdentifier testIdentifier, TestExecutionResult testExecutionResult) {
+        super.executionFinished(testIdentifier, testExecutionResult);
         if (!testIdentifier.isTest()) {
             return;
         }
         TestExecutionSummary summary = getSummary();
         Optional<Throwable> throwable = testExecutionResult.getThrowable();
         TestRunResult testRunResult = new TestRunResult();
-        testRunResult.setUniqueId(testIdentifier.getUniqueId());
         testRunResult.setState(testExecutionResult.getStatus().name());
         testRunResult.setDisplayName(testIdentifier.getDisplayName());
+        testRunResult.setUniqueId(clazz.getName() + "#" + method);
         testRunResult.setThrowable(throwable.orElse(null));
+        testRunResult.setCost(System.currentTimeMillis() - summary.getTimeStarted());
+        testRunResult.setFailed(summary.getTestsFailedCount());
+        testRunResult.setSucceeded(summary.getTestsSucceededCount());
+        testRunResult.setSkipped(summary.getTestsSkippedCount());
+        testRunResult.setStarted(summary.getTestsStartedCount());
         EventBus.publishEvent(new FastSpringTestEvent(EventEnum.RUN_TESTCASE, testRunResult));
     }
 }

@@ -8,6 +8,9 @@ import cn.net.fasttest.event.FastSpringTestListener;
 import cn.net.fasttest.runner.TestRunResult;
 import cn.net.fasttest.utils.FontColorUtil;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
+
 /**
  * @author liubingmx@163.com
  * @create 2024/01/12
@@ -47,6 +50,9 @@ public class ShowCommandHandler implements CommandHandler, FastSpringTestListene
             log("------------------------execution finished : %s" + "------------------------", FontColorUtil.format("√ " + lastRunResult.getDisplayName(), FontColorUtil.BULE));
         } else {
             log("------------------------execution failed : %s" + "------------------------", FontColorUtil.format("× " + lastRunResult.getDisplayName(), FontColorUtil.RED));
+            if (lastRunResult.getThrowable() != null) {
+                lastRunResult.getThrowable().printStackTrace(System.out);
+            }
         }
         System.out.println();
         log("--------------------------------- Summary ---------------------------------");
@@ -56,6 +62,6 @@ public class ShowCommandHandler implements CommandHandler, FastSpringTestListene
                 lastRunResult.getSkipped(), lastRunResult.getCost());
 
         log("You can use \"SHOW\" command to see detail.");
-        log("You can use \"RERUN\" to rerun these cases.");
+        log("You can use \"RERUN\" command to rerun these cases.");
     }
 }

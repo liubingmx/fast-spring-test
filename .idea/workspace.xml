@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39d6d11a-42d9-4c66-bf28-163d575b53d7" name="Changes" comment="[feat] add hot class loader">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/net/fasttest/utils/FontColorUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/net/fasttest/command/handler/ShowCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/net/fasttest/command/handler/ShowCommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/net/fasttest/runner/TestRunResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/net/fasttest/runner/TestRunResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/net/fasttest/runner/junit/JunitRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/net/fasttest/runner/junit/JunitRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/net/fasttest/runner/junit/JunitTestExecutionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/net/fasttest/runner/junit/JunitTestExecutionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/architecture.png" beforeDir="false" afterPath="$PROJECT_DIR$/doc/architecture.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +45,7 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="fast-spring-test" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
+                <item name="publishing" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -90,38 +87,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.com.fast.spring.test.FastSpringTests.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.Build fast-spring-test.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CommandParserTest.test.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.fast-spring-test [:FastSpringTests.main()].executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.fast-spring-test [assemble].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.fast-spring-test [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.fast-spring-test [install].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.fast-spring-test [jar].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/liubing/IdeaProjects/fast-spring-test/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;fileTemplates&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.com.fast.spring.test.FastSpringTests.executor": "Debug",
+    "Gradle.Build fast-spring-test.executor": "Run",
+    "Gradle.CommandParserTest.test.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.fast-spring-test [:FastSpringTests.main()].executor": "Debug",
+    "Gradle.fast-spring-test [assemble].executor": "Run",
+    "Gradle.fast-spring-test [build].executor": "Run",
+    "Gradle.fast-spring-test [install].executor": "Run",
+    "Gradle.fast-spring-test [jar].executor": "Run",
+    "Gradle.fast-spring-test [publishToMavenLocal].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/liubing/IdeaProjects/fast-spring-test/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "fileTemplates",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/doc" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -130,22 +131,10 @@
       <command value="gradle jar" />
       <command value="gradle install" />
       <command value="gradle build" />
+      <command value="gradle build -x test" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.cn.net.fasttest.FastSpringTests">
-    <configuration name="cn.net.fasttest.FastSpringTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.net.fasttest.FastSpringTests" />
-      <module name="fast-spring-test.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.net.fasttest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Gradle.fast-spring-test [publishToMavenLocal]">
     <configuration name="fast-spring-test [assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -234,13 +223,35 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="fast-spring-test [publishToMavenLocal]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="publishToMavenLocal" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.fast-spring-test [publishToMavenLocal]" />
         <item itemvalue="Gradle.fast-spring-test [build]" />
         <item itemvalue="Gradle.fast-spring-test [install]" />
         <item itemvalue="Gradle.fast-spring-test [jar]" />
         <item itemvalue="Gradle.fast-spring-test [assemble]" />
-        <item itemvalue="Application.cn.net.fasttest.FastSpringTests" />
       </list>
     </recent_temporary>
   </component>
@@ -265,7 +276,7 @@
       <workItem from="1704628980248" duration="1345000" />
       <workItem from="1704632662014" duration="23306000" />
       <workItem from="1705048090806" duration="17178000" />
-      <workItem from="1705241444249" duration="3783000" />
+      <workItem from="1705241444249" duration="5835000" />
     </task>
     <servers />
   </component>
@@ -301,7 +312,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/cn/net/fasttest/command/handler/ShowCommandHandler.java</url>
-          <line>34</line>
+          <line>37</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -321,25 +332,25 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/cn/net/fasttest/command/handler/ShowCommandHandler.java</url>
-          <line>54</line>
+          <line>60</line>
           <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/net/fasttest/runner/junit/JunitTestExecutionListener.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-launcher/1.9.1/d5679a91eba86a856998e08b1f8bad0f1be1d722/junit-platform-launcher-1.9.1-sources.jar!/org/junit/platform/launcher/listeners/SummaryGeneratingListener.java</url>
-          <line>97</line>
-          <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/cn/net/fasttest/command/handler/RunCommandHandler.java</url>
           <line>31</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/net/fasttest/command/handler/ShowCommandHandler.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.io.PrintWriter" memberName="autoFlush" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

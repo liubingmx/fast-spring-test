@@ -4,7 +4,7 @@
   
 ## Architecture
 
-![Architecture](https://github.com/liubingmx/fast-spring-test/blob/main/src/main/resources/architecture.png)
+![Architecture](https://github.com/liubingmx/fast-spring-test/blob/doc/architecture.png)
 
 ## Features
 

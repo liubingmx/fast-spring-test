@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39d6d11a-42d9-4c66-bf28-163d575b53d7" name="Changes" comment="[feat] add hot class loader">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/net/fasttest/command/handler/ShowCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/net/fasttest/command/handler/ShowCommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/architecture.png" beforeDir="false" afterPath="$PROJECT_DIR$/doc/architecture.png" afterDir="false" />
-    </list>
+    <list default="true" id="39d6d11a-42d9-4c66-bf28-163d575b53d7" name="Changes" comment="[feat] add hot class loader" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,7 +99,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/liubing/IdeaProjects/fast-spring-test/src/main/resources",
+    "last_opened_file_path": "/Users/liubing/IdeaProjects/fast-spring-test/doc",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -119,6 +114,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/doc" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -276,7 +272,7 @@
       <workItem from="1704628980248" duration="1345000" />
       <workItem from="1704632662014" duration="23306000" />
       <workItem from="1705048090806" duration="17178000" />
-      <workItem from="1705241444249" duration="5835000" />
+      <workItem from="1705241444249" duration="6139000" />
     </task>
     <servers />
   </component>

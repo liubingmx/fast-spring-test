@@ -6,6 +6,13 @@
 
 ![Architecture](https://github.com/liubingmx/fast-spring-test/blob/main/doc/architecture.png)
 
+## Effects
+
+
+https://github.com/liubingmx/fast-spring-test/assets/20813546/00874ed7-e1b6-483c-8d3a-e40e46116142
+
+
+
 ## Features
 
 * 单元测试类热加载

@@ -19,7 +19,7 @@ https://github.com/liubingmx/fast-spring-test/assets/20813546/00874ed7-e1b6-483c
 
 ```xml
 <properties>
-    <fast.spring.test.version>0.0.1</fast.spring.test.version>
+    <fast.spring.test.version>0.0.2</fast.spring.test.version>
 </properties>
 
 <dependencies>

@@ -32,12 +32,13 @@ https://github.com/liubingmx/fast-spring-test/assets/20813546/00874ed7-e1b6-483c
     <dependency>
         <groupId>cn.net.fasttest</groupId>
         <artifactId>fast-spring-test</artifactId>
+        <scope>test</scope>
         <version>${fast.spring.test.version}</version>
     </dependency>
 </dependencies>
 ```
 
-### add test entry
+### Add test entry
 
 ```java
 public class FastSpringApplicationTests {

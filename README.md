@@ -13,12 +13,6 @@ https://github.com/liubingmx/fast-spring-test/assets/20813546/00874ed7-e1b6-483c
 
 - 第一次运行需要启动测试环境，耗时较长， 第二次往后可复用容器，单测执行时间可至毫秒级别
 
-## Features
-
-* 单元测试类热加载
-* 支持Junit4、Junit5测试引擎
-
-
 ## Getting started
 
 ### Maven dependency

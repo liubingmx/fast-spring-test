@@ -1,7 +1,7 @@
 package cn.net.fasttest.command;
 
 /**
- * @author: liubingmx@163.com
+ * @author bing
  * @create 2024/01/07
  */
 public interface CommandHandler {

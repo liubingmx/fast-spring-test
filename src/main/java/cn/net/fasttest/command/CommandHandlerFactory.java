@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author liubingmx@163.com
+ * @author bing
  * @create 2024/01/07
  */
 public class CommandHandlerFactory {

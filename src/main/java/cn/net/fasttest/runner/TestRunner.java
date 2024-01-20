@@ -8,8 +8,8 @@ public interface TestRunner {
 
     /**
      *  run test case
-     * @param clazz
-     * @param method
+     * @param clazz run class
+     * @param method run method
      */
     void run(Class<?> clazz, String method);
 }

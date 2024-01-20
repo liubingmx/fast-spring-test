@@ -1,8 +1,8 @@
 package cn.net.fasttest.configuration;
 
 /**
- * @author liubingmx@163.com
- * @create 2024/01/07
+ * author bing
+ * create 2024/01/07
  */
 public class Configuration {
 

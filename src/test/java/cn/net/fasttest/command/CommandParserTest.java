@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 public class CommandParserTest {
 
     @Test
-    public void test() {
+    public void parseCommandTest() {
         String line = "run com.fast.spring.test.command.CommandParserTest.test";
         Command command = new CommandParser().parseCommand(line);
         Assertions.assertEquals("run", command.getName());

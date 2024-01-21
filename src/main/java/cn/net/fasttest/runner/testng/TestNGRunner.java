@@ -18,7 +18,7 @@ public class TestNGRunner implements TestRunner {
 
     @Override
     public void run(Class<?> clazz, String method) {
-        XmlClass xmlClass = new XmlClass(clazz.getName());
+        XmlClass xmlClass = new XmlClass(clazz);
         // now mention the methods to be included. You may use setExcludedMethods depending on the requirement.
         XmlInclude methodIn = new XmlInclude(method);
         List<XmlInclude> list = new ArrayList<>();

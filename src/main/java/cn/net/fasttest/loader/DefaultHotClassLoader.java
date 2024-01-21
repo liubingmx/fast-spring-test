@@ -30,16 +30,16 @@ public class DefaultHotClassLoader  implements HotLoadClassLoader{
 
         @Override
         public Class<?> loadClass(String name) throws ClassNotFoundException {
-            if (!name.equals(loadClassName)) {
-                return Thread.currentThread().getContextClassLoader().loadClass(name);
-            }
             return findClass(name);
         }
 
         @Override
-        public Class<?> findClass(String testClassName) {
+        public Class<?> findClass(String testClassName) throws ClassNotFoundException {
             if (testClassName == null) {
                 return null;
+            }
+            if (!testClassName.equals(loadClassName)) {
+                return Thread.currentThread().getContextClassLoader().loadClass(testClassName);
             }
             String fileName = testClassName.replaceAll("\\.", "/") + ".class";
             fileName = (getClass().getResource("/") + fileName).substring(5);

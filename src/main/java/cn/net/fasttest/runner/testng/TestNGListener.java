@@ -5,11 +5,9 @@ import cn.net.fasttest.event.EventEnum;
 import cn.net.fasttest.event.FastSpringTestEvent;
 import cn.net.fasttest.runner.TestRunResult;
 import org.junit.platform.engine.TestExecutionResult;
-import org.junit.platform.launcher.listeners.TestExecutionSummary;
 import org.testng.*;
 
 import java.util.Map;
-import java.util.Optional;
 import java.util.Set;
 
 /**

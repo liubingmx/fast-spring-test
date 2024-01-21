@@ -1,6 +1,6 @@
 Languages： English | [中文](README_CN.md)
 # fast-spring-test
-Based on junit5 and drawing on spring test's support for integration testing, unit testing can also reuse spring containers to achieve the purpose of rapid single testing.
+Unit testing speedup tool. Based on junit5 and drawing on spring test's support for integration testing, unit testing can also reuse spring containers to achieve the purpose of rapid single testing.
   
 ## Architecture
 

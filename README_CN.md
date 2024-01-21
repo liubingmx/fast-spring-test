@@ -1,7 +1,7 @@
 
 Languages： 中文 [English](README.md)
 # fast-spring-test
-单元测试提速，以junit5为基础， 借鉴spring test对集成测试的支持，使单元测试也可以复用spring容器，不用重启spring容器，以达到快速单测的目的
+单元测试提速工具，以junit5为基础， 借鉴spring test对集成测试的支持，使单元测试也可以复用spring容器，不用重启spring容器，以达到快速单测的目的
 
 ## 使用效果
 

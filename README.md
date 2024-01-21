@@ -1,6 +1,6 @@
+Languages： English | [中文](README_CN.md)
 # fast-spring-test
-  单元测试提速，以junit5为基础， 借鉴spring test对集成测试的支持，使单元测试也可以复用spring容器，不用重启spring容器，以达到快速单测的目的
-
+Based on junit5 and drawing on spring test's support for integration testing, unit testing can also reuse spring containers to achieve the purpose of rapid single testing.
   
 ## Architecture
 
@@ -11,7 +11,7 @@
 
 https://github.com/liubingmx/fast-spring-test/assets/20813546/00874ed7-e1b6-483c-8d3a-e40e46116142
 
-- 第一次运行需要启动测试环境，耗时较长， 第二次往后可复用容器，单测执行时间可至毫秒级别
+- The first run requires starting the test environment, which takes a long time. The container can be reused after the second run, and the execution time of a single test can be as low as milliseconds.
 
 ## Getting started
 
@@ -50,7 +50,21 @@ public class FastSpringApplicationTests {
 }
 ```
 
-IDE run FastSpringApplicationTests
+IDE run FastSpringApplicationTests, execute the following command to start testing
+```
+# run com.xx.class#method
+run cn.net.fasttest.FastSpringApplicationTests#test
+# or
+cn.net.fasttest.FastSpringApplicationTests#test
+```
+
+## Contributing
+
+- We welcome and encourage you to contribute to our projects. If you have any questions, suggestions, or want to contribute code, please contact us via email, GitHub issues, or submit a PR directly. Your participation will make this project even better!
+
+## Reporting bugs
+
+- [GitHub Issue](https://github.com/liubingmx/fast-spring-test/issues/new)
 
 ## License
 

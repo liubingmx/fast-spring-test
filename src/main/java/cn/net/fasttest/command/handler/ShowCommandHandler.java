@@ -50,6 +50,7 @@ public class ShowCommandHandler implements CommandHandler, FastSpringTestListene
             log("------------------------execution finished : %s" + "------------------------", FontColorUtil.format("√ " + lastRunResult.getDisplayName(), FontColorUtil.BULE));
         } else {
             log("------------------------execution failed : %s" + "------------------------", FontColorUtil.format("× " + lastRunResult.getDisplayName(), FontColorUtil.RED));
+            System.out.println();
             if (lastRunResult.getThrowable() != null) {
                 lastRunResult.getThrowable().printStackTrace(System.out);
             }

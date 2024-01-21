@@ -1,6 +1,7 @@
 package cn.net.fasttest.runner;
 
 import cn.net.fasttest.runner.junit.JunitRunner;
+import cn.net.fasttest.runner.testng.TestNGRunner;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
@@ -20,6 +21,7 @@ public class RunnerFactory {
     static {
         register("org.junit.jupiter.api.Test", new JunitRunner());
         register("org.junit..Test", new JunitRunner());
+        register("org.testng.annotations.Test", new TestNGRunner());
     }
 
     public static void register(String name, TestRunner runner) {

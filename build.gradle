@@ -26,8 +26,10 @@ dependencies {
     implementation 'org.junit.jupiter:junit-jupiter'
     implementation 'org.junit.platform:junit-platform-launcher'
     implementation 'org.jline:jline:3.25.0'
+    implementation 'org.testng:testng:7.4.0'
 }
 
 test {
     useJUnitPlatform()
+    useTestNG()
 }

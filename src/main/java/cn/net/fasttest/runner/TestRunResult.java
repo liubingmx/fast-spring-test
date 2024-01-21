@@ -1,5 +1,7 @@
 package cn.net.fasttest.runner;
 
+import org.junit.platform.engine.TestExecutionResult;
+
 /**
  * @author liubingmx@163.com
  * @create 2024/01/12
@@ -8,6 +10,9 @@ public class TestRunResult {
 
     private String uniqueId;
 
+    /**
+     * @see TestExecutionResult.Status
+     */
     private String state;
     private String displayName;
     private long cost;

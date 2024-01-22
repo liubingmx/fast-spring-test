@@ -67,6 +67,7 @@ public class FastSpringTest {
             terminal = TerminalBuilder.builder()
                     .system(true)
                     .color(true)
+                    .dumb(true)
                     .build();
         } catch (IOException e) {
             throw new RuntimeException(e);

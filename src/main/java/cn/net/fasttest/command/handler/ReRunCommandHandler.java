@@ -6,6 +6,7 @@ import cn.net.fasttest.event.FastSpringTestEvent;
 import cn.net.fasttest.event.FastSpringTestListener;
 import cn.net.fasttest.command.Command;
 import cn.net.fasttest.command.CommandHandlerFactory;
+import cn.net.fasttest.event.Subscribe;
 import cn.net.fasttest.exception.FastTestException;
 
 /**
@@ -30,15 +31,13 @@ public class ReRunCommandHandler implements CommandHandler, FastSpringTestListen
     }
 
     @Override
+    @Subscribe(EventEnum.EXECUTE_COMMAND)
     public void listen(FastSpringTestEvent event) {
-        if (!EventEnum.EXECUTE_COMMAND.equals(event.getEvent())) {
-            return;
-        }
         if (!(event.getSource() instanceof Command)) {
             return;
         }
         Command lastCommand = (Command)event.getSource();
-        if (!lastCommand.getName().equalsIgnoreCase("RUN")) {
+        if (!lastCommand.getName().equalsIgnoreCase(new RunCommandHandler().getCommand().getName())) {
             return;
         }
         lasRunCommand = lastCommand;

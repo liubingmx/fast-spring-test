@@ -8,5 +8,9 @@ import java.util.EventListener;
  */
 public interface FastSpringTestListener extends EventListener {
 
+    /**
+     *  This method is called when the subscribed event occurs
+     * @param event event Object
+     */
     void listen(FastSpringTestEvent event);
 }

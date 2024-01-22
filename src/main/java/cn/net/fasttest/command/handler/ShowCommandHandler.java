@@ -5,11 +5,9 @@ import cn.net.fasttest.command.CommandHandler;
 import cn.net.fasttest.event.EventEnum;
 import cn.net.fasttest.event.FastSpringTestEvent;
 import cn.net.fasttest.event.FastSpringTestListener;
+import cn.net.fasttest.event.Subscribe;
 import cn.net.fasttest.runner.TestRunResult;
 import cn.net.fasttest.utils.FontColorUtil;
-
-import java.io.PrintWriter;
-import java.io.StringWriter;
 
 /**
  * @author liubingmx@163.com
@@ -34,10 +32,8 @@ public class ShowCommandHandler implements CommandHandler, FastSpringTestListene
     }
 
     @Override
+    @Subscribe(EventEnum.RUN_TESTCASE)
     public void listen(FastSpringTestEvent event) {
-        if (!EventEnum.RUN_TESTCASE.equals(event.getEvent())) {
-            return;
-        }
         if (!(event.getSource() instanceof TestRunResult)) {
             return;
         }

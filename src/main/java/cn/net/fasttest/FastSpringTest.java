@@ -29,7 +29,7 @@ public class FastSpringTest {
         CommandHandlerFactory.init();
     }
     public static void run() {
-        run(new Configuration.ConfigurationBuilder().build());
+        run(Configuration.ConfigurationBuilder.builder().build());
     }
 
     public static void run(Configuration configuration)  {
@@ -62,7 +62,7 @@ public class FastSpringTest {
 
 
     private static LineReader getLineReader() {
-        Terminal terminal = null;
+        Terminal terminal;
         try {
             terminal = TerminalBuilder.builder()
                     .system(true)

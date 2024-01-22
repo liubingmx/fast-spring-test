@@ -7,6 +7,7 @@ package cn.net.fasttest.command;
 public interface CommandHandler {
 
     /**
+     *  get command
      * @return command
      */
     Command getCommand();

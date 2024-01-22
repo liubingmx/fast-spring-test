@@ -5,8 +5,21 @@ package cn.net.fasttest.event;
  * @create 2024/01/12
  */
 public enum EventEnum {
+
+    /**
+     * application started event
+     */
     STARTED,
+
+    /**
+     * Execute command event
+     */
     EXECUTE_COMMAND,
-    RUN_TESTCASE
-    ;
+
+    /**
+     * Test case run event
+     */
+    RUN_TESTCASE,
+
+
 }

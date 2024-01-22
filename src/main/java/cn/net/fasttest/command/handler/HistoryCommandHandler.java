@@ -1,14 +1,13 @@
 package cn.net.fasttest.command.handler;
 
+import cn.net.fasttest.command.Command;
 import cn.net.fasttest.command.CommandHandler;
 import cn.net.fasttest.event.EventEnum;
 import cn.net.fasttest.event.FastSpringTestEvent;
-import cn.net.fasttest.command.Command;
 import cn.net.fasttest.event.FastSpringTestListener;
+import cn.net.fasttest.event.Subscribe;
 import org.jline.reader.History;
 import org.jline.reader.LineReader;
-
-import java.util.ListIterator;
 
 /**
  * @author liubingmx@163.com
@@ -25,17 +24,14 @@ public class HistoryCommandHandler implements CommandHandler, FastSpringTestList
 
     @Override
     public void run(Command command) {
-        ListIterator<History.Entry> iterator = defaultHistory.iterator();
-        while (iterator.hasNext()) {
-            System.out.println(iterator.next());
+        for (History.Entry entry : defaultHistory) {
+            System.out.println(entry);
         }
     }
 
     @Override
+    @Subscribe(EventEnum.STARTED)
     public void listen(FastSpringTestEvent event) {
-        if (!EventEnum.STARTED.equals(event.getEvent())) {
-            return;
-        }
         this.defaultHistory = ((LineReader)event.getSource()).getHistory();
     }
 }

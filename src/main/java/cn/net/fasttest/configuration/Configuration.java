@@ -1,7 +1,7 @@
 package cn.net.fasttest.configuration;
 
 /**
- * author bing
+ * @author bing
  * create 2024/01/07
  */
 public class Configuration {
@@ -9,9 +9,7 @@ public class Configuration {
     /**
      *  cli prompt
      */
-    private String prompt = "\033[1;34mFast-Spring-Test ->\033[0m";
-    private String commandSeparator = " ";
-
+    private String prompt;
     public Configuration(ConfigurationBuilder builder) {
         this.prompt = builder.getPrompt();
     }
@@ -20,16 +18,11 @@ public class Configuration {
         return prompt;
     }
 
-    public String getCommandSeparator() {
-        return commandSeparator;
-    }
-
-    public void setPrompt(String prompt) {
-        this.prompt = prompt;
-    }
-
     public static class ConfigurationBuilder {
         private String prompt = "\033[1;34mFast-Spring-Test ->\033[0m";
+
+        private ConfigurationBuilder() {
+        }
 
         public static ConfigurationBuilder builder() {
             return new ConfigurationBuilder();

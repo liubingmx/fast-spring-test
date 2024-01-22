@@ -6,5 +6,10 @@ package cn.net.fasttest.loader;
  */
 public interface HotLoadClassLoader {
 
+    /**
+     *  hot load test class
+     * @param testClassName class name
+     * @return clazz
+     */
     Class<?> loadTestClass(String testClassName);
 }

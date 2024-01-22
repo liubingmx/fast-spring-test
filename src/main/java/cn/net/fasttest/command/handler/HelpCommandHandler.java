@@ -15,7 +15,7 @@ import java.util.List;
 public class HelpCommandHandler implements CommandHandler {
     @Override
     public Command getCommand() {
-        return new Command("help", "Print help information for all commands",null);
+        return new Command("help", "Print help information for all commands");
     }
 
     @Override

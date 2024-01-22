@@ -22,7 +22,7 @@ public class RunCommandHandler implements CommandHandler {
 
     @Override
     public Command getCommand() {
-        return new Command("run", "Run test case,example:\n \trun cn.net.fasttest.FastSpringTests#test", null);
+        return new Command("run", "Run test case,example:\n \trun cn.net.fasttest.FastSpringTests#test");
     }
 
     @Override

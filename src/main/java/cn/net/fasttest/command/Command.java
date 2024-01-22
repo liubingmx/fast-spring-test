@@ -22,8 +22,9 @@ public class Command {
         this.options = options;
     }
 
-    public Command(String name) {
+    public Command(String name, String description) {
         this.name = name;
+        this.description = description;
     }
 
     public Command(String commandName, Option option) {

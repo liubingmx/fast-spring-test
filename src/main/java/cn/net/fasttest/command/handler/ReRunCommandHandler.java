@@ -18,7 +18,7 @@ public class ReRunCommandHandler implements CommandHandler, FastSpringTestListen
 
     @Override
     public Command getCommand() {
-        return new Command("rerun", "Rerun last test case", null);
+        return new Command("rerun", "Rerun last test case");
     }
 
     @Override

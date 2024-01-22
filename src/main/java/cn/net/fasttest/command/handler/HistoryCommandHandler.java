@@ -20,7 +20,7 @@ public class HistoryCommandHandler implements CommandHandler, FastSpringTestList
 
     @Override
     public Command getCommand() {
-        return new Command("history", "Show the most recently executed command", null);
+        return new Command("history", "Show the most recently executed command");
     }
 
     @Override

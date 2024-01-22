@@ -8,6 +8,7 @@ import cn.net.fasttest.event.EventEnum;
 import cn.net.fasttest.event.FastSpringTestEvent;
 import cn.net.fasttest.exception.FastTestException;
 import cn.net.fasttest.command.Command;
+import cn.net.fasttest.utils.FontColorUtil;
 import org.jline.reader.EndOfFileException;
 import org.jline.reader.LineReader;
 import org.jline.reader.LineReaderBuilder;
@@ -45,8 +46,7 @@ public class FastSpringTest {
                 CommandHandlerFactory.getCommandHandler(command.getName()).run(command);
                 EventBus.publishEvent(new FastSpringTestEvent(EventEnum.EXECUTE_COMMAND, command));
             } catch (FastTestException e) {
-                System.out.println("\n" + e.getMessage());
-                continue;
+                System.out.println("\n" + FontColorUtil.format(e.getMessage(), FontColorUtil.RED));
             } catch (EndOfFileException e) {
                 System.out.println("\nBye ~ ");
                 break;

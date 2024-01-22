@@ -1,11 +1,8 @@
 package cn.net.fasttest.command;
 
-import cn.net.fasttest.command.handler.HistoryCommandHandler;
-import cn.net.fasttest.command.handler.ReRunCommandHandler;
+import cn.net.fasttest.command.handler.*;
 import cn.net.fasttest.event.EventBus;
 import cn.net.fasttest.exception.FastTestException;
-import cn.net.fasttest.command.handler.RunCommandHandler;
-import cn.net.fasttest.command.handler.ShowCommandHandler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,14 +16,14 @@ public class CommandHandlerFactory {
     private static List<CommandHandler> handlers = new ArrayList<>();
 
     public static void init() {
-        RunCommandHandler runCommandHandler = new RunCommandHandler();
         ShowCommandHandler showCommandHandler = new ShowCommandHandler();
         ReRunCommandHandler reRunCommandHandler = new ReRunCommandHandler();
         HistoryCommandHandler historyCommandHandler = new HistoryCommandHandler();
-        register(runCommandHandler);
+        register(new RunCommandHandler());
         register(showCommandHandler);
         register(reRunCommandHandler);
         register(historyCommandHandler);
+        register(new HelpCommandHandler());
         EventBus.addListener(showCommandHandler);
         EventBus.addListener(reRunCommandHandler);
         EventBus.addListener(historyCommandHandler);
@@ -42,5 +39,9 @@ public class CommandHandlerFactory {
                 .findFirst()
                 .orElseThrow(() -> new FastTestException("【 " + commandName + " 】This command is not currently supported"));
 
+    }
+
+    public static List<CommandHandler> getAllCommandHandlers() {
+        return handlers;
     }
 }

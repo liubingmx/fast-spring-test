@@ -6,6 +6,7 @@ import cn.net.fasttest.event.FastSpringTestEvent;
 import cn.net.fasttest.event.FastSpringTestListener;
 import cn.net.fasttest.command.Command;
 import cn.net.fasttest.command.CommandHandlerFactory;
+import cn.net.fasttest.exception.FastTestException;
 
 /**
  * @author bing
@@ -17,11 +18,14 @@ public class ReRunCommandHandler implements CommandHandler, FastSpringTestListen
 
     @Override
     public Command getCommand() {
-        return new Command("rerun");
+        return new Command("rerun", "Rerun last test case", null);
     }
 
     @Override
     public void run(Command command) {
+        if (lasRunCommand == null) {
+            throw new FastTestException("Please execute the run command first ");
+        }
         CommandHandlerFactory.getCommandHandler(lasRunCommand.getName()).run(lasRunCommand);
     }
 

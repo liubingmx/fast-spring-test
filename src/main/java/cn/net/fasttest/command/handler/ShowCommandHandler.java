@@ -21,7 +21,7 @@ public class ShowCommandHandler implements CommandHandler, FastSpringTestListene
 
     @Override
     public Command getCommand() {
-        return new Command("show");
+        return new Command("show", "Show the results of the last run", null);
     }
 
     @Override

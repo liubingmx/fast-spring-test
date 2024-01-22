@@ -1,6 +1,7 @@
 package cn.net.fasttest.command.handler;
 
 import cn.net.fasttest.command.CommandHandler;
+import cn.net.fasttest.exception.FastTestException;
 import cn.net.fasttest.loader.HotLoadClassLoader;
 import cn.net.fasttest.runner.RunnerFactory;
 import cn.net.fasttest.command.Command;
@@ -21,13 +22,16 @@ public class RunCommandHandler implements CommandHandler {
 
     @Override
     public Command getCommand() {
-        return new Command("run", null, null);
+        return new Command("run", "Run test case,example:\n \trun cn.net.fasttest.FastSpringTests#test", null);
     }
 
     @Override
     public void run(Command command) {
         Optional<Command.Option> first = command.getOptions().stream().findFirst();
         String args = first.get().getArgs();
+        if (args.trim().isEmpty()) {
+            throw new FastTestException("Please enter correct parameters");
+        }
         String[] classNameAndMethodName = args.split("#");
         Class<?> clazz = hotLoadClassLoader.loadTestClass(classNameAndMethodName[0]);
         String methodName = classNameAndMethodName.length > 1 ? classNameAndMethodName[1] : null;

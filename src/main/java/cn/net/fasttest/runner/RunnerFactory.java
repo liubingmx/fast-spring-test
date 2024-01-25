@@ -20,7 +20,7 @@ public class RunnerFactory {
 
     static {
         register("org.junit.jupiter.api.Test", new JunitRunner());
-        register("org.junit..Test", new JunitRunner());
+        register("org.junit.Test", new JunitRunner());
         register("org.testng.annotations.Test", new TestNGRunner());
     }
 

@@ -11,7 +11,7 @@ The unit test speed-up tool draws on spring test's support for integration testi
 
 https://github.com/liubingmx/fast-spring-test/assets/20813546/00874ed7-e1b6-483c-8d3a-e40e46116142
 
-- The first run requires starting the test environment, which takes a long time. The container can be reused after the second run, and the execution time of a single test can be as low as milliseconds.
+- The first run requires starting the running environment, which takes a long time. After the second run, the container can be reused, and the unit test execution time can be down to the millisecond level. There is no need to restart when adding a single test case. The test can be hot loaded and executed directly.
 
 ## Getting started
 

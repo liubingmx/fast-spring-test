@@ -25,8 +25,9 @@ dependencies {
     implementation platform('org.junit:junit-bom:5.9.1')
     implementation 'org.junit.jupiter:junit-jupiter'
     implementation 'org.junit.platform:junit-platform-launcher'
+    implementation 'org.junit.vintage:junit-vintage-engine'
     implementation 'org.jline:jline:3.25.0'
-    implementation 'org.testng:testng:7.4.0'
+    implementation 'org.testng:testng:7.7.0'
 }
 
 test {

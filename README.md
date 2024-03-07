@@ -49,7 +49,6 @@ public class FastSpringApplicationTests {
   }
 }
 ```
-
 IDE run FastSpringApplicationTests, execute the following command to start testing
 ```
 # run com.xx.class#method
@@ -57,6 +56,17 @@ run cn.net.fasttest.FastSpringApplicationTests#test
 # or
 cn.net.fasttest.FastSpringApplicationTests#test
 ```
+### All Commands
+- run : Run test case,example:
+    - run cn.net.fasttest.FastSpringTests#test
+
+- show : Show the results of the last run
+
+- rerun : Rerun last test case
+
+- history : Show the most recently executed command
+
+- help : Print help information for all commands
 
 ## Contributing
 

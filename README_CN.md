@@ -47,13 +47,27 @@ public class FastSpringApplicationTests {
 }
 ```
 
-在你的IDE里运行 FastSpringApplicationTests，然后通过以下命令行执行单元测试
+在你的IDE里右键运行 FastSpringApplicationTests，然后通过以下命令行执行单元测试
 ```
 # run com.xx.class#method
 run cn.net.fasttest.FastSpringApplicationTests#test
 # 或者
 cn.net.fasttest.FastSpringApplicationTests#test
 ```
+
+### 命令列表
+- run : 运行单元测试，执行如下命令，cn.net.fasttest.FastSpringTests#test为单元测试全路径名，也可直接输入cn.net.fasttest.FastSpringTests#test:
+    - run cn.net.fasttest.FastSpringTests#test
+
+- show : 展示最后一次运行的单元测试的运行结果
+
+- rerun : 重新运行最后一次运行的单测
+
+- history : 展示最近执行的命令
+
+- help : 输出所有命令的解释信息
+
+IDE run FastSpringApplicationTests, execute the following command to start testing
 
 ## Contributing
 

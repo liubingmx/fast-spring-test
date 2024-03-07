@@ -67,8 +67,6 @@ cn.net.fasttest.FastSpringApplicationTests#test
 
 - help : 输出所有命令的解释信息
 
-IDE run FastSpringApplicationTests, execute the following command to start testing
-
 ## Contributing
 
 - 我们非常欢迎并鼓励您为我们的项目做出贡献。如果您有任何问题、建议或想要贡献代码，请通过邮件、GitHub issues或直接提交PR与我们联系。您的参与将使这个项目更加完美！

@@ -27,6 +27,7 @@ public class CommandHandlerFactory {
         EventBus.addListener(showCommandHandler);
         EventBus.addListener(reRunCommandHandler);
         EventBus.addListener(historyCommandHandler);
+        register(new QuitCommandHandler());
     }
 
     public static void register(CommandHandler commandHandler) {

@@ -66,6 +66,7 @@ cn.net.fasttest.FastSpringApplicationTests#test
 - history : 展示最近执行的命令
 
 - help : 输出所有命令的解释信息
+- quit : 退出程序
 
 ## Contributing
 

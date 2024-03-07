@@ -68,6 +68,8 @@ cn.net.fasttest.FastSpringApplicationTests#test
 
 - help : Print help information for all commands
 
+- quit : Quit.
+
 ## Contributing
 
 - We welcome and encourage you to contribute to our projects. If you have any questions, suggestions, or want to contribute code, please contact us via email, GitHub issues, or submit a PR directly. Your participation will make this project even better!

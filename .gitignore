@@ -13,6 +13,9 @@ build/
 *.iws
 *.iml
 *.ipr
+*.bak
+secring.gpg
+gradle.properties
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/

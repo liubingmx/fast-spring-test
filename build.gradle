@@ -1,22 +1,93 @@
 plugins {
-    id 'java'
+    id 'java-library'
+    id 'maven-publish'
+    id 'signing'
 }
 
+
 group = 'cn.net.fasttest'
-version = '1.0.0-SNAPSHOT'
+archivesBaseName = "fast-spring-test"
+version = '1.0.3'
 
 repositories {
     mavenCentral()
 }
 
-apply plugin: 'maven-publish'
+
+javadoc {
+    options.tags = [ "create" ]
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
 
 publishing {
     publications {
         mavenJava(MavenPublication) {
+            artifactId = 'fast-spring-test'
             from components.java
+            versionMapping {
+                usage('java-api') {
+                    fromResolutionOf('runtimeClasspath')
+                }
+                usage('java-runtime') {
+                    fromResolutionResult()
+                }
+            }
+            pom {
+                name='fast-spring-test'
+                // optionally artifactId can be defined here
+                description='Unit testing speedup tool.'
+                url='https://github.com/liubingmx/fast-spring-test'
+
+                scm {
+                    connection='cm:git://github.com/liubingmx/fast-spring-test'
+                    developerConnection='scm:git:https://github.com/liubingmx/fast-spring-test.git'
+                    url='https://github.com/liubingmx/fast-spring-test'
+                }
+
+                licenses {
+                    license {
+                        name='The Apache License, Version 2.0'
+                        url='http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id='rocco'
+                        name='rocco'
+                        email='liubingmx@163.com'
+                    }
+                }
+            }
         }
     }
+    repositories {
+        maven {
+            name = "OSSRH"
+            url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+            credentials {
+                username = ossrhUsername
+                password = ossrhPassword
+            }
+        }
+
+        maven {
+            name = "ossrhSnapshot"
+            url = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+            credentials {
+                username = ossrhUsername
+                password = ossrhPassword
+            }
+        }
+    }
+}
+
+signing {
+    sign publishing.publications.mavenJava
 }
 
 

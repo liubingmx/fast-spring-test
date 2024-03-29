@@ -16,10 +16,20 @@ public class TestRunResult {
     private String state;
     private String displayName;
     private long cost;
+
+    private long totalTestCount;
     private long started;
     private long succeeded;
     private long failed;
     private long skipped;
+
+    public long getTotalTestCount() {
+        return totalTestCount;
+    }
+
+    public void setTotalTestCount(long totalTestCount) {
+        this.totalTestCount = totalTestCount;
+    }
 
     public void setCost(long cost) {
         this.cost = cost;

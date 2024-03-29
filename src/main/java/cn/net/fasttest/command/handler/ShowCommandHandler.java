@@ -52,8 +52,11 @@ public class ShowCommandHandler implements CommandHandler, FastSpringTestListene
             }
         }
         System.out.println();
+        if (lastRunResult.getTotalTestCount() != lastRunResult.getStarted()) {
+            return;
+        }
         log("--------------------------------- Summary ---------------------------------");
-        log("RUN %s",lastRunResult.getUniqueId());
+        log("RUN %s", lastRunResult.getUniqueId());
         log("Result -- started:%d -- succeeded: %d -- failed: %d -- skipped: %d -- cost: %d ms",
                 lastRunResult.getStarted(), lastRunResult.getSucceeded(), lastRunResult.getFailed(),
                 lastRunResult.getSkipped(), lastRunResult.getCost());

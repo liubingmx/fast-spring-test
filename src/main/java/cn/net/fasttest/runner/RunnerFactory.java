@@ -56,6 +56,13 @@ public class RunnerFactory {
                         return runnerMap.get(runnerName);
                     }
                 }
+                Method[] methods = clazz.getMethods();
+                for (Method method : methods) {
+                    testAnnotation = method.getAnnotation(testAnnotationClazz);
+                    if (Objects.nonNull(testAnnotation)) {
+                        return runnerMap.get(runnerName);
+                    }
+                }
             } catch (ClassNotFoundException e) {
                 continue;
             }catch (NoSuchMethodException | ClassCastException e){

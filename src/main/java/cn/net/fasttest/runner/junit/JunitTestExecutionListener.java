@@ -39,13 +39,14 @@ public class JunitTestExecutionListener extends SummaryGeneratingListener implem
         TestRunResult testRunResult = new TestRunResult();
         testRunResult.setState(testExecutionResult.getStatus().name());
         testRunResult.setDisplayName(testIdentifier.getDisplayName());
-        testRunResult.setUniqueId(clazz.getName() + "#" + method);
+        testRunResult.setUniqueId(method != null ? clazz.getName() + "#" + method : clazz.getName());
         testRunResult.setThrowable(throwable.orElse(null));
         testRunResult.setCost(System.currentTimeMillis() - summary.getTimeStarted());
         testRunResult.setFailed(summary.getTestsFailedCount());
         testRunResult.setSucceeded(summary.getTestsSucceededCount());
         testRunResult.setSkipped(summary.getTestsSkippedCount());
         testRunResult.setStarted(summary.getTestsStartedCount());
+        testRunResult.setTotalTestCount(summary.getTestsFoundCount());
         EventBus.publishEvent(new FastSpringTestEvent(EventEnum.RUN_TESTCASE, testRunResult));
     }
 }

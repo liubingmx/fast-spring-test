@@ -62,6 +62,7 @@ public class FastSpringTest {
 
 
     private static LineReader getLineReader() {
+        System.setProperty("org.jline.terminal.exec.redirectPipeCreationMode", "native");
         Terminal terminal;
         try {
             terminal = TerminalBuilder.builder()

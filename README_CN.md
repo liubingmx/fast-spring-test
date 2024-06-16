@@ -42,7 +42,10 @@ public class FastSpringApplicationTests {
   }
 
   public static void main(String[] args) {
-    FastSpringTest.run();
+    Configuration configuration = Configuration.ConfigurationBuilder.builder()
+            .prompt("fast-spring-test-demo => ")
+            .build();
+    FastSpringTest.run(configuration);
   }
 }
 ```

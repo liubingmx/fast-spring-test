@@ -1,5 +1,6 @@
 package cn.net.fasttest;
 
+import cn.net.fasttest.configuration.Configuration;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -23,6 +24,9 @@ public class FastSpringTests {
     }
 
     public static void main(String[] args) {
-        FastSpringTest.run();
+        Configuration configuration = Configuration.ConfigurationBuilder.builder()
+                .prompt("fast-spring-test-demo => ")
+                .build();
+        FastSpringTest.run(configuration);
     }
 }
